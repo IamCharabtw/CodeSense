@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeSense</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>CodeSense</h1>
+        <p>Alt+Space ile AI tamamlama, yazarken sağ panelden öneriyi Tab ile direkt ekle.</p>
+      </header>
+
+      <section class="workspace">
+        <section class="editor-panel">
+          <label for="editor">Kod Editörü</label>
+          <textarea id="editor" spellcheck="false" placeholder="Kodunuzu yazın..."></textarea>
+        </section>
+
+        <aside class="suggestion-panel" id="suggestionPanel">
+          <div class="suggestion-head">
+            <h2>AI Satır Önerisi</h2>
+            <span class="shortcut">Tab ile ekle</span>
+          </div>
+          <pre id="inlineSuggestion">Yazmaya başlayın, öneri burada görünsün.</pre>
+          <div class="suggestion-actions">
+            <button id="acceptSuggestionBtn" type="button">Öneriyi Ekle (Tab)</button>
+            <button id="dismissSuggestionBtn" type="button" class="ghost">Kapat</button>
+          </div>
+        </aside>
+      </section>
+
+      <div class="actions">
+        <button id="optimizeBtn" type="button">AI ile Optimize Et</button>
+      </div>
+
+      <section class="status-panel">
+        <strong>Durum:</strong>
+        <span id="status">Hazır</span>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

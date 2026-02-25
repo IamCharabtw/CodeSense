@@ -1,0 +1,131 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin-bottom: 0.35rem;
+}
+
+p {
+  margin-top: 0;
+  color: #94a3b8;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.editor-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#editor {
+  min-height: 440px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e2e8f0;
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.suggestion-panel {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+
+.suggestion-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.suggestion-head h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.shortcut {
+  color: #93c5fd;
+  font-size: 0.82rem;
+}
+
+#inlineSuggestion {
+  min-height: 220px;
+  max-height: 320px;
+  overflow: auto;
+  margin: 0.8rem 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px dashed #475569;
+  background: #020617;
+  color: #c7d2fe;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+  font-size: 0.9rem;
+}
+
+.suggestion-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions {
+  margin: 1rem 0;
+}
+
+button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.ghost {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.status-panel {
+  color: #cbd5e1;
+}
+
+@media (max-width: 980px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
